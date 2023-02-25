@@ -1,6 +1,8 @@
 FROM docker.io/rockylinux/rockylinux:9.1
 LABEL maintainer="Rob"
 
+USER mainAppUser
+
 RUN dnf upgrade
 RUN dnf install tzdata
 ENV TZ="America/Chicago"
